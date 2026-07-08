@@ -30,12 +30,14 @@ export default function DepartmentChart({ data = [] }) {
   };
 
   return (
+    <div className="overflow-x-auto">
     <div className="bg-white rounded-xl shadow p-6">
       <h2 className="text-xl font-bold mb-4">
         Department Distribution
       </h2>
 
       <Bar data={chartData} />
+    </div>
     </div>
   );
 }

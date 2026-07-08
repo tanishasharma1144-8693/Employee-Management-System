@@ -843,9 +843,8 @@ shadow
 
 
 
-<table className="
-w-full
-">
+<div className="overflow-x-auto">
+    <table className="min-w-full">
 
 
 <thead className="

@@ -12,7 +12,7 @@ export default function Navbar() {
     useContext(ThemeContext);
 
   return (
-    <nav className="bg-white dark:bg-slate-900 shadow px-8 py-4 flex justify-between items-center">
+    <nav className="bg-white dark:bg-slate-900 shadow px-4 md:px-8 py-4 flex justify-between items-center">
 
       <h1 className="text-2xl font-bold text-blue-600">
         Employee Management

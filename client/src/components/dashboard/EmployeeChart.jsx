@@ -31,12 +31,14 @@ export default function EmployeeChart({
   };
 
   return (
+    <div className="overflow-x-auto">
     <div className="bg-white rounded-xl shadow p-6">
       <h2 className="text-xl font-bold mb-4">
         Employee Status
       </h2>
 
       <Pie data={data} />
+    </div>
     </div>
   );
 }
