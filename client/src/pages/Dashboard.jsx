@@ -9,7 +9,7 @@ import ActivityCard from "../components/dashboard/ActivityCard";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 import DashboardContainer from "../components/dashboard/DashboardContainer";
 import Skeleton from "../components/Skeleton";
-import Navbar from "../components/Navbar";
+
 
 import { getDashboardStats } from "../services/dashboardService";
 import { getEmployees } from "../services/employeeService";
@@ -56,7 +56,7 @@ export default function Dashboard() {
 
   return (
     <>
-      <Navbar />
+
 
       <DashboardContainer>
         <div className="bg-gray-100 dark:bg-slate-900 dark:text-white min-h-screen p-8">
