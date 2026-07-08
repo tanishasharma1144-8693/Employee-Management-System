@@ -14,40 +14,42 @@ export default function Navbar({ setSidebarOpen }) {
     useContext(ThemeContext);
 
   return (
-    <nav className="bg-white dark:bg-slate-900 shadow px-4 md:px-8 py-4 flex justify-between items-center">
+    <nav className="bg-white dark:bg-slate-900 shadow px-4 py-3 flex items-center justify-between">
 
-      <div className="flex items-center gap-4">
+  {/* Left */}
+  <div className="flex items-center gap-3">
 
-        {/* Mobile Menu Button */}
+    {/* Hamburger */}
+    <button
+      onClick={() => setSidebarOpen(true)}
+      className="lg:hidden text-3xl"
+    >
+      ☰
+    </button>
 
-        <button
-          className="text-2xl lg:hidden"
-          onClick={() => setSidebarOpen(true)}
-        >
-          <FaBars />
-        </button>
+    <h1 className="text-lg md:text-2xl font-bold text-blue-600">
+  Employee
+  <span className="hidden sm:inline"> Management</span>
+</h1>
 
-        <h1 className="text-xl md:text-2xl font-bold text-blue-600">
-          Employee Management
-        </h1>
+  </div>
 
-      </div>
+  {/* Right */}
+  <div className="flex items-center gap-2 md:gap-5 flex-shrink-0">
 
-      <div className="flex items-center gap-5">
+    <button
+      onClick={toggleTheme}
+      className="text-xl md:text-2xl"
+    >
+      {darkMode ? <FaSun /> : <FaMoon />}
+    </button>
 
-        <button
-          onClick={toggleTheme}
-          className="text-2xl"
-        >
-          {darkMode ? <FaSun /> : <FaMoon />}
-        </button>
+    <NotificationDropdown />
 
-        <NotificationDropdown />
+    <ProfileDropdown />
 
-        <ProfileDropdown />
+  </div>
 
-      </div>
-
-    </nav>
+</nav>
   );
 }

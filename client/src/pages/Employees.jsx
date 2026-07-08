@@ -419,7 +419,9 @@ return <Loader/>;
 return (
 
 <div className="
-p-8
+p-4
+md:p-6
+lg:p-8
 bg-gray-100
 dark:bg-slate-900
 min-h-screen
@@ -428,9 +430,9 @@ min-h-screen
 
 
 
-
 <h1 className="
-text-3xl
+text-2xl
+md:text-3xl
 font-bold
 dark:text-white
 ">
@@ -460,7 +462,9 @@ Manage employees from one place
 
 <div className="
 grid
-md:grid-cols-3
+grid-cols-1
+sm:grid-cols-2
+lg:grid-cols-3
 gap-5
 mb-8
 ">
@@ -596,7 +600,9 @@ e=>e.status==="Inactive"
 
 <div className="
 flex
-flex-wrap
+flex-col
+sm:flex-row
+sm:flex-wrap
 gap-3
 mb-6
 ">
@@ -609,6 +615,7 @@ exportEmployees(filteredEmployees)
 }
 
 className="
+w-full sm:w-auto justify-center
 bg-green-600
 text-white
 px-4
@@ -634,6 +641,7 @@ Excel
 onClick={handlePDFExport}
 
 className="
+w-full sm:w-auto justify-center
 bg-red-600
 text-white
 px-4
@@ -668,6 +676,7 @@ isAdmin &&
 to="/employees/add"
 
 className="
+w-full sm:w-auto justify-center
 bg-blue-600
 text-white
 px-5
@@ -713,8 +722,9 @@ mb-6
 
 
 <div className="
-flex
-flex-wrap
+grid
+grid-cols-1
+md:grid-cols-3
 gap-4
 ">
 
@@ -725,6 +735,7 @@ gap-4
 placeholder="Search employee..."
 
 className="
+w-full
 border
 rounded-lg
 px-4
@@ -750,6 +761,7 @@ e=>setDepartment(e.target.value)
 }
 
 className="
+w-full
 border
 rounded-lg
 px-4
@@ -792,6 +804,7 @@ e=>setStatus(e.target.value)
 }
 
 className="
+w-full
 border
 rounded-lg
 px-4
@@ -839,12 +852,12 @@ bg-white
 dark:bg-slate-800
 rounded-xl
 shadow
+w-full
 ">
 
 
 
-<div className="overflow-x-auto">
-    <table className="min-w-full">
+<table className="min-w-[900px] w-full">
 
 
 <thead className="

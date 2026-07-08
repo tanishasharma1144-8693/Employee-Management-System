@@ -100,7 +100,7 @@ export default function Sidebar({
       {/* Sidebar */}
       <aside
         className={`
-          fixed lg:static
+          fixed lg:fixed
           top-0 left-0
           z-50
           w-64

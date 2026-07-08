@@ -24,17 +24,10 @@ export default function ProfileDropdown() {
           alt=""
         />
 
-        <div className="text-left">
-
-          <p className="font-semibold">
-            {user?.name}
-          </p>
-
-          <p className="text-sm text-gray-500">
-            {user?.email}
-          </p>
-
-        </div>
+        <div className="hidden md:block">
+  <p className="font-semibold">{user?.name}</p>
+  <p className="text-xs">{user?.email}</p>
+</div>
 
       </button>
 
